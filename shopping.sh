@@ -24,13 +24,11 @@ showbillfun(){
 savebillfun(){
     directory=$(date +%d%m%Y)
     time=$(date +%H%M%S)
-    if [[ -d ./billing/$directory ]];
+    if [[ ! -d $HOME/billing/$directory ]];
     then
-        echo
-    else
-        mkdir "./billing/$directory"
+        mkdir -p "$HOME/billing/$directory"
     fi
-    { column -t -s' ' tmpbill.txt; echo; echo; echo "Total Amount = $totalAmount"; } >> "./billing/$directory/$time.txt"
+    { column -t -s' ' tmpbill.txt; echo; echo; echo "Total Amount = $totalAmount"; } >> "$HOME/billing/$directory/$time.txt"
 }
 
 touch tmpbill.txt
