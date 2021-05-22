@@ -1,0 +1,12 @@
+Apple 100
+Banana 60
+Brinjal 20
+Bed 1000
+Carrot 50
+Cucumber 60
+Eggs 61
+Ice_Cream 20
+Lemon 2
+Pillow 500
+exit
+check
